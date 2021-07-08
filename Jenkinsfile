@@ -7,6 +7,9 @@ parameters{
      stage('deploying build'){
        steps{
         git branch: '${Branch}', url: 'https://github.com/iosjsk/webhook.git'
+        script{
+          sh "git --version"
+         }
          }
          }
      }    
